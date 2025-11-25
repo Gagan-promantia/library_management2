@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container my-5">
+  <h1>{{ doc.title }}</h1>
+  <p><strong>Author:</strong> {{ doc.author }}</p>
+  <p><strong>ISBN:</strong> {{ doc.isbn }}</p>
+  <p><strong>Status:</strong> {{ doc.book_status }}</p>
+
+  {% if doc.cover_image %}
+    <img src="{{ doc.cover_image }}" alt="{{ doc.book_name }}" class="img-fluid rounded shadow mt-3" />
+  {% endif %}
+
+  <hr>
+  <p><em>Added on {{ doc.creation }}</em></p>
+</div>
+{% endblock %}

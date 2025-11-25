@@ -1,0 +1,7 @@
+{
+  "library_management2.bundle": {
+    "css": [
+      "public/css/style.bundle.scss"
+    ]
+}
+}

@@ -1,0 +1,12 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Email Template",
+  "modified": "2025-11-10 14:56:48.230931",
+  "name": "Note Created Template",
+  "response": "<div class=\"ql-editor read-mode\"><p>Hello {{ doc.owner }},<br></p><p>A new Note titled \"{{ doc.title }}\" has been created.<br></p><p>Content: {{ doc.content }}</p></div>",
+  "response_html": "Hello {{ doc.owner }},\nA new Note titled \"{{ doc.title }}\" has been created.\nContent: {{ doc.content }}",
+  "subject": "New Note Created: {{ doc.title }}",
+  "use_html": 1
+ }
+]

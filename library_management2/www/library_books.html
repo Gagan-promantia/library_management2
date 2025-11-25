@@ -1,0 +1,28 @@
+{% extends "templates/web.html" %}
+
+
+{% block page_content %}
+<script src="{{ bundled_asset('main.bundle.js') }}"></script>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">📚 Library Books</h1>
+    <div id="members"></div>
+
+    <div class="row">
+        {% for book in books %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                {% if book.image %}
+                <img src="{{ book.image }}" class="card-img-top" alt="{{ book.book_name }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p><strong>Author:</strong> {{ book.author }}</p>
+                    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+[
+ {
+  "charts": [],
+  "content": "[{\"id\":\"Ee87_VBlHr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Library Dashboard</span>\",\"col\":12}},{\"id\":\"rGk4Is334G\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Book\",\"col\":3}},{\"id\":\"gGvau0kKrI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Transaction\",\"col\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": null,
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Library Dashboard",
+  "links": [],
+  "modified": "2025-11-11 10:57:03.770121",
+  "module": null,
+  "name": "Library Dashboard",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 23.0,
+  "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Library Book",
+    "link_to": "Library Book2",
+    "parent": "Library Dashboard",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Library Transaction",
+    "link_to": "Library Transaction",
+    "parent": "Library Dashboard",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   }
+  ],
+  "title": "Library Dashboard"
+ }
+]

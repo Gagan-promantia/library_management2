@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Book Doctype",
+  "enabled": 1,
+  "modified": "2025-11-14 20:01:20.152101",
+  "module": "Library Management2",
+  "name": "Fetch Book Info",
+  "script": "frappe.ui.form.on(\"Book Doctype\", {\n    book_title: function(frm) {\n\n        if (!frm.doc.book_title) return;\n\n        frappe.call({\n            method: \"library_management2.api.get_book_info_ui\",\n            args: {\n                book_title: frm.doc.book_title\n            },\n            callback: function(r) {\n                console.log(\"SERVER RESPONSE:\", r);\n\n                if (!r.message) {\n                    frappe.msgprint(\"No response from server.\");\n                    return;\n                }\n\n                frappe.msgprint(r.message);\n            }\n        });\n    }\n});\n",
+  "view": "Form"
+ }
+]

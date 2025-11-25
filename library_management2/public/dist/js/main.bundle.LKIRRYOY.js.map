@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../apps/library_management2/library_management2/public/main.bundle.js"],
+  "sourcesContent": ["console.log(\"\u2705 Hello from MyApp Bundle!\");\nconsole.log(\"\u2705 Custom Script Active!\");\n\nfetch('/api/resource/Library Member?fields=[\"name\",\"first_name\",\"last_name\"]&limit_page_length=5')\n    .then(response => response.json())\n    .then(data => {\n        console.log(\"Library Members:\", data.data);\n        const membersDiv = document.getElementById(\"members\");\n        membersDiv.innerHTML = data.data.map(\n            m => `<p>${m.first_name} ${m.last_name}</p>`\n        ).join(\"\");\n    })\n    .catch(err => console.error(\"Error fetching Library Members:\", err));\n"],
+  "mappings": ";;AAAA,UAAQ,IAAI,iCAA4B;AACxC,UAAQ,IAAI,8BAAyB;AAErC,QAAM,2FAA2F,EAC5F,KAAK,cAAY,SAAS,KAAK,CAAC,EAChC,KAAK,UAAQ;AACV,YAAQ,IAAI,oBAAoB,KAAK,IAAI;AACzC,UAAM,aAAa,SAAS,eAAe,SAAS;AACpD,eAAW,YAAY,KAAK,KAAK;AAAA,MAC7B,OAAK,MAAM,EAAE,cAAc,EAAE;AAAA,IACjC,EAAE,KAAK,EAAE;AAAA,EACb,CAAC,EACA,MAAM,SAAO,QAAQ,MAAM,mCAAmC,GAAG,CAAC;",
+  "names": []
+}

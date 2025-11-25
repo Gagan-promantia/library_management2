@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": "get_book_info_ui",
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-11-14 19:57:01.687310",
+  "module": "Library Management2",
+  "name": "get_book_info_ui",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "",
+  "script": "def get_book_info_ui(book_title):\n    if not book_title:\n        return {\"error\": \"Book title is required\"}\n\n    book = frappe.db.get_value(\n        \"Book Doctype\",\n        {\"book_title\": book_title},\n        [\"author\", \"isbn\", \"shelf\", \"publisher\", \"publication_year\", \"description\"],\n        as_dict=True\n    )\n\n    if not book:\n        return {\"error\": \"Book not found\"}\n\n    return book\n",
+  "script_type": "API"
+ }
+]

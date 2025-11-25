@@ -81,6 +81,7 @@ app_license = "mit"
 
 # Installation
 # ------------
+after_install = "library_management2.install.after_install"
 
 # before_install = "library_management2.install.before_install"
 # after_install = "library_management2.install.after_install"
@@ -144,6 +145,8 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+
+
 
 # Scheduled Tasks
 # ---------------
@@ -242,3 +245,73 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+app_include_js = ["main.bundle.js"]
+web_include_js = "/assets/library_management2/main.bundle.js"
+web_include_css = "/assets/library_management2/css/bundle.style.scss"
+
+
+
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [["dt", "=", "Note"]],
+        "module": "Library Management2"
+    },
+    {
+        "dt":"Property Setter",
+        "filters":[["doc_type","=","Note"]],
+        "module":"Library Management2"
+    },
+    {
+        "dt":"Client Script",
+        "filters":[["dt", "=","Note"]],
+        "module":"Library Management2"
+    }, 
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["name", "=", "Fetch Book Info"]
+        ],
+        "module": "Library Management2"
+    },
+
+   # hooks.py
+    {
+        "dt": "Server Script",
+        "filters": [
+            ["name", "=", "get_book_info_ui"]
+        ],
+        "module": "Library Management2"
+    },
+
+    {
+        "dt":"Email Template",
+        "filters":[["name","=","Note created Template"]],
+        "module":"Library Management2"
+    },
+    {
+    "dt": "Notification",
+    "filters": [["name", "=", "New Note Notification"]],
+    "module": "Library Management2"
+     },
+         {
+        "dt": "Library Members",
+        "filters": [["name", "in", ["mopa3e11mu", "bbm4l9jqc2", "78qargrjut", "4qgug3854u", "kbfa6m3bfg"]]]
+     },
+     {
+        "dt": "Role",
+        "filters": [["name", "=", "Library Manager"]],
+        "module": "Library Management"
+    },
+    {
+        "dt": "Workspace",
+        "filters": [["name", "=", "Library Dashboard"]],
+        "module": "Library Management2"
+    },
+        {
+        "dt": "Translation",
+        "filters": [["source_text", "=", "Hello"]]
+    }
+
+]
