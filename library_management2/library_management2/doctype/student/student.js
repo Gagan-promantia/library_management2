@@ -37,7 +37,7 @@ frappe.ui.form.on('Student', {
                     if(r.message && !r.message.error){
                         console.log("Student Name:", r.message.student_name);
                         console.log("Course Name:", r.message.course.course_name);
-
+			//  to set the value of student ,course total marks 
                         // Optional: set fields on the form
                         frm.set_value('total_marks', r.message.total_marks);
                         frm.refresh_field('total_marks');
